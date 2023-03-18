@@ -41,7 +41,7 @@ jobs:
       - name: Build and Push to Registries
         uses: docker/build-push-action@v4
         with:
-          platforms: linux/386
+          platforms: linux/amd64
           push: ${{ github.event_name != 'pull_request' }}
           tags: |
             ghcr.io/qmk/qmk_api_redis:latest
